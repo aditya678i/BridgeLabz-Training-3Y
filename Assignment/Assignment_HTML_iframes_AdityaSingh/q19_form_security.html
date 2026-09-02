@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Security Attributes</title>
+</head>
+<body>
+
+  <h1>Secure Login Form</h1>
+
+  <!-- autocomplete="off" prevents the browser from saving/suggesting values -->
+  <form action="#" method="post" autocomplete="off">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <p>
+    Turning off autocomplete can improve security because it prevents
+    sensitive information, such as passwords, from being stored and
+    auto-filled by the browser on shared or public devices, reducing the
+    risk of unauthorized access.
+  </p>
+
+</body>
+</html>

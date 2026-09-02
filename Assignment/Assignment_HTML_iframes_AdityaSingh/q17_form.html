@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Form</title>
+</head>
+<body>
+
+  <h1>Submit Your Response</h1>
+
+  <!--
+    The form's "target" attribute points to the named iframe below.
+    When submitted, the result page loads inside that iframe instead
+    of navigating the whole page - all done using plain HTML, no JS.
+  -->
+  <form action="q17_result.html" method="get" target="resultFrame">
+    <label for="response">Enter Text:</label>
+    <input type="text" id="response" name="response" required>
+    <input type="submit" value="Submit">
+  </form>
+
+  <br>
+
+  <!-- This iframe displays the result page after submission -->
+  <iframe name="resultFrame" title="Result Frame" width="400" height="100">
+  </iframe>
+
+</body>
+</html>
