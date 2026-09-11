@@ -1,0 +1,59 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #fdfaf5;
+  color: #2a2a2a;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  line-height: 1.7;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  color: #6b6b6b;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* Consistent spacing between paragraphs */
+article p {
+  margin-bottom: 1.4rem;
+}
+
+/* Larger first letter of each paragraph */
+article p::first-letter {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #7a1f2b;
+  float: left;
+  line-height: 1;
+  padding-right: 6px;
+}
+
+/* Bold first line of each paragraph */
+article p::first-line {
+  font-weight: bold;
+}
+
+/* Highlighted keywords */
+mark {
+  background-color: #ffe08a;
+  color: #2a2a2a;
+  padding: 0 2px;
+}
+
+/* Blockquote emphasis */
+blockquote {
+  border-left: 5px solid #7a1f2b;
+  background-color: #f1e8dc;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #4a4a4a;
+}

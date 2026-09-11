@@ -1,0 +1,94 @@
+/* ===== Base setup ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222831;          /* text color */
+  background-color: #eeeeee; /* background color, keeps contrast with text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* vh unit: page always at least full viewport height */
+}
+
+/* ===== Fixed header ===== */
+.site-header {
+  position: fixed;      /* stays at top when scrolling, as required */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2rem;      /* em unit */
+  background-color: #222831;
+  color: #eeeeee;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem; /* rem unit */
+}
+
+.site-header nav a {
+  color: #eeeeee;
+  text-decoration: none;
+  margin-left: 1.5em;
+  font-size: 1rem;
+}
+
+.site-header nav a:hover {
+  color: #00adb5;
+}
+
+/* ===== Main content ===== */
+main {
+  flex: 1;                 /* pushes footer down, works with flex footer trick */
+  margin-top: 70px;         /* px unit, offsets fixed header height */
+  padding: 2rem 10%;        /* % unit for horizontal padding */
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+main section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+main section h2 {
+  margin-bottom: 0.75rem;
+  color: #00adb5;
+}
+
+/* ===== Footer always at bottom (flexbox method) ===== */
+.site-footer {
+  background-color: #222831;
+  color: #eeeeee;
+  text-align: center;
+  padding: 1rem;
+}

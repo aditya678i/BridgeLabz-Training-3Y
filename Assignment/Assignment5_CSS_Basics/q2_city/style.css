@@ -1,0 +1,94 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #2b2b2b;
+  background-color: #f7f3ec;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #7a1f2b;
+  color: #f7f3ec;
+}
+
+header h1 {
+  font-size: 2.75rem;   /* heading font-size variation 1 */
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #4a1420;
+}
+
+nav a {
+  color: #f7f3ec;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main section {
+  width: 100%;
+  padding: 4rem 12%;
+  border-bottom: 4px solid #4a1420;
+}
+
+main section h2 {
+  font-size: 2rem;      /* heading font-size variation 2 */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+main section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* Linear gradient section */
+.section-gradient-linear {
+  background: linear-gradient(135deg, #f7c59f 0%, #7a1f2b 100%);
+  color: #fff;
+}
+
+/* Radial gradient section */
+.section-gradient-radial {
+  background: radial-gradient(circle at center, #ffe8b3 0%, #b3541e 100%);
+  color: #2b2b2b;
+}
+
+/* Parallax-like fixed background sections */
+.section-fixed-1 {
+  background-image: url("https://placehold.co/1200x600/333/fff?text=Fushimi+Inari");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+.section-fixed-2 {
+  background-image: url("https://placehold.co/1200x600/555/fff?text=Arashiyama");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #4a1420;
+  color: #f7f3ec;
+}

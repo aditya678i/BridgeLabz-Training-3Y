@@ -1,0 +1,103 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1f2430;
+}
+
+.page-title {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.pricing-grid {
+  display: flex;              /* three equal columns */
+  align-items: stretch;       /* equal height even when text varies */
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem 2rem 4rem;
+}
+
+.plan {
+  background-color: #ffffff;
+  flex: 1 1 260px;
+  max-width: 300px;
+  padding: 2rem 1.5rem;
+  border: 1px solid #dcdfe4;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  background-color: #eef3ff;
+}
+
+.plan h2 {
+  margin-bottom: 0.75rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2952e3;
+  margin-bottom: 1.5rem;
+}
+
+.price span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex-grow: 1;             /* keeps buttons aligned at bottom */
+}
+
+.plan ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #2952e3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.btn:hover {
+  background-color: #1c3ba8;
+}
+
+/* Highlight the most popular plan */
+.plan.popular {
+  border: 3px solid #2952e3;
+  position: relative;
+}
+
+.plan.popular::before {
+  content: "Most Popular";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2952e3;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}

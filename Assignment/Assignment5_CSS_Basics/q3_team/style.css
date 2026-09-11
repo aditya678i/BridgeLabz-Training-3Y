@@ -1,0 +1,69 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #23272f;
+}
+
+.page-title {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.team-grid {
+  display: flex;              /* flexbox to align cards in one row */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem 3rem;
+}
+
+.card {
+  background-color: #ffffff;
+  flex: 1 1 260px;            /* three roughly equal columns */
+  max-width: 300px;
+
+  /* Box model: uniform padding/margin */
+  padding: 1.5rem;
+  margin: 0.5rem;
+
+  border: 2px solid #d0d5dc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 0.4rem;
+}
+
+.card .role {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+}
+
+.card .desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555c66;
+}
+
+/* Highlighted Team Lead card */
+.card.lead {
+  background-color: #fff4e0;
+  border: 2px dashed #d98c2b;
+}
+
+/* Responsive: single column below 600px */
+@media (max-width: 600px) {
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
