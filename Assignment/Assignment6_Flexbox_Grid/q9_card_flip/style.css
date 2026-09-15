@@ -1,0 +1,73 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #10131c;
+  color: #e6e9f0;
+}
+
+/* Card centred on screen using Flexbox */
+.stage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  width: 300px;
+  height: 380px;
+  perspective: 1000px;   /* gives the flip its 3D depth */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;              /* keeps both faces in 3D space */
+  transition: transform 0.7s ease;
+}
+
+/* Flip on hover (and keyboard focus) */
+.card:hover .card-inner,
+.card:focus-within .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;  /* hides the reversed side */
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.card-front {
+  background-color: #1d2333;
+  gap: 1.25rem;
+}
+
+.card-front img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-back {
+  background-color: #c9922e;
+  color: #1a1408;
+  transform: rotateY(180deg);   /* starts already flipped */
+  gap: 0.9rem;
+}
+
+.card-back p { line-height: 1.6; font-size: 0.95rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-inner { transition: none; }
+}

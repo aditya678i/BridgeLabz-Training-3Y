@@ -1,0 +1,97 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f6f4ef;
+  color: #2b2925;
+  line-height: 1.65;
+}
+
+/* Grid template areas define the whole page structure */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar posts"
+    "footer  footer";
+  gap: 1.5rem;
+  padding: 1.5rem;
+  min-height: 100vh;
+}
+
+.site-header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #2b2925;
+  color: #f6f4ef;
+  border-radius: 8px;
+}
+
+.site-header nav a {
+  color: #f6f4ef;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover { text-decoration: underline; }
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ebe6da;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.sidebar h2 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+.sidebar ul { list-style: none; }
+.sidebar ul li { margin-bottom: 0.5rem; }
+.sidebar ul li a { color: #6b4c2f; text-decoration: none; }
+.sidebar ul li a:hover { text-decoration: underline; }
+
+/* Two blog posts side by side */
+.posts {
+  grid-area: posts;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.post {
+  background-color: #fff;
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid #e3ded2;
+}
+
+.post h2 { font-size: 1.25rem; margin-bottom: 0.4rem; }
+
+.meta { font-size: 0.85rem; color: #8a8378; margin-bottom: 0.9rem; }
+
+.site-footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #2b2925;
+  color: #f6f4ef;
+  border-radius: 8px;
+}
+
+/* Below 800px: sidebar moves below the main content */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "posts"
+      "sidebar"
+      "footer";
+  }
+  .posts { grid-template-columns: 1fr; }
+  .site-header { flex-direction: column; gap: 0.75rem; }
+  .site-header nav a { margin: 0 0.6rem; }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">Field Notes</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">Topics</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-grid">
+
+    <article class="article">
+      <h1 class="article-title">Building layouts that survive real content</h1>
+      <p>Most layouts look fine with the text a designer chose. They break when
+      a title runs three lines or a price field holds a much longer number.
+      Designing against awkward content early saves rework later.</p>
+      <p>Grid and Flexbox both help here, but for different reasons. Grid
+      defines the page's overall skeleton; Flexbox handles how a row of related
+      items shares the space it is given.</p>
+
+      <div class="boxes">
+        <div class="box">
+          <h3>Plan the skeleton</h3>
+          <p>Decide rows and columns before writing any component styles.</p>
+        </div>
+        <div class="box">
+          <h3>Test with bad data</h3>
+          <p>Long words, empty fields, missing images — try them all.</p>
+        </div>
+        <div class="box">
+          <h3>Collapse deliberately</h3>
+          <p>Choose the mobile stacking order instead of letting it happen.</p>
+        </div>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <h2>Recent</h2>
+      <ul>
+        <li><a href="#">Focus states people can see</a></li>
+        <li><a href="#">A short note on gap</a></li>
+        <li><a href="#">When not to use Grid</a></li>
+        <li><a href="#">Reading list, autumn</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Field Notes. Written and built by Aditya Singh.</p>
+  </footer>
+
+</body>
+</html>

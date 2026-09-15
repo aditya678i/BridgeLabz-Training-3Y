@@ -1,0 +1,45 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fbfaf7;
+  color: #23211d;
+}
+
+.page-title { text-align: center; padding: 2rem 0 1rem; }
+
+/* Auto-fitting responsive grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 2.5rem 4rem;
+}
+
+/* .frame clips the zoom so the image stays inside its cell */
+.frame {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;   /* image fills its grid cell completely */
+  transition: transform 0.5s ease;
+}
+
+.item:hover img { transform: scale(1.08); }
+
+.item figcaption {
+  padding-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #5c574f;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item img { transition: none; }
+}

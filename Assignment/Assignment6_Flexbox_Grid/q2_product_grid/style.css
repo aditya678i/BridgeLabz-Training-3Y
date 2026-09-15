@@ -1,0 +1,58 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1f2430;
+}
+
+.page-title { text-align: center; padding: 2rem 0 1rem; }
+
+/* 4 equal columns on desktop */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 3rem 4rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e0e3e8;
+  text-align: center;
+
+  /* equal height regardless of text length */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h2 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+
+.price { font-size: 1.3rem; font-weight: 700; color: #2952e3; }
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 2rem 3rem;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 550px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.25rem 3rem;
+  }
+}
