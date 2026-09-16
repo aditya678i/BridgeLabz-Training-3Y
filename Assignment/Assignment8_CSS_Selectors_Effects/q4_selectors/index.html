@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CSS Selectors Practice</h1>
+  </header>
+
+  <main>
+    <!-- Element selector target -->
+    <p>This paragraph is styled using an element selector.</p>
+
+    <!-- Class selector target -->
+    <p class="highlight">This paragraph is styled using a class selector.</p>
+
+    <!-- ID selector target -->
+    <p id="intro">This paragraph is styled using an ID selector.</p>
+
+    <!-- Attribute selector target -->
+    <a href="https://example.com" target="_blank">External link (attribute selector)</a>
+
+    <!-- Descendant combinator target -->
+    <div class="card">
+      <p>Paragraph inside .card — descendant selector.</p>
+    </div>
+
+    <!-- Child combinator target -->
+    <ul class="list-demo">
+      <li>Direct child item one</li>
+      <li>Direct child item two</li>
+      <li>
+        Nested list below (not a direct child of ul.list-demo's rule):
+        <ul>
+          <li>Nested item</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Adjacent sibling combinator target -->
+    <h2>Heading</h2>
+    <p>This paragraph directly follows the heading — adjacent sibling (+).</p>
+
+    <!-- General sibling combinator target -->
+    <h3>Another Heading</h3>
+    <p>First sibling paragraph.</p>
+    <p>Second sibling paragraph — general sibling (~) also applies here.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Selectors Practice Page</p>
+  </footer>
+
+</body>
+</html>

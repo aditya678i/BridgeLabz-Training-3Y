@@ -1,0 +1,87 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1e2230;
+
+  /* Soft background gradient */
+  background: linear-gradient(135deg, #dfe9f3 0%, #f5f7fa 100%);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.ui-card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 640px;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.ui-card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* All components aligned in a row using Flexbox */
+.component-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1 1 220px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #cfd5e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #2952e3;
+  box-shadow: 0 0 0 3px rgba(41, 82, 227, 0.15);
+}
+
+.btn {
+  padding: 0.7rem 1.3rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn.primary { background-color: #2952e3; color: #fff; }
+.btn.primary:hover { background-color: #1c3ba8; }
+
+.btn.secondary { background-color: #e5e8ee; color: #333; }
+.btn.secondary:hover { background-color: #d3d7e0; }
+
+.btn:focus {
+  outline: 3px solid #a9c0ff;
+  outline-offset: 2px;
+}
+
+.dropdown {
+  flex: 1 1 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #cfd5e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #fff;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: #2952e3;
+}

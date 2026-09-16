@@ -1,0 +1,80 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f2f4f8;
+  color: #1d2129;
+}
+
+.page-title { text-align: center; padding: 2.5rem 0 1.5rem; }
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 2rem 4rem;
+}
+
+.btn {
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid transparent;
+}
+
+/* Primary button */
+.btn.primary {
+  background-color: #2952e3;
+  color: #fff;
+}
+.btn.primary:hover {
+  background-color: #1c3ba8;
+  transform: translateY(-2px);
+}
+.btn.primary:active {
+  transform: translateY(0);
+  background-color: #16307f;
+}
+
+/* Secondary button */
+.btn.secondary {
+  background-color: #6b7280;
+  color: #fff;
+}
+.btn.secondary:hover {
+  background-color: #4b5160;
+  transform: translateY(-2px);
+}
+
+/* Outline button */
+.btn.outline {
+  background-color: transparent;
+  border-color: #2952e3;
+  color: #2952e3;
+  box-shadow: none;
+}
+.btn.outline:hover {
+  background-color: #2952e3;
+  color: #fff;
+}
+
+/* Focus state — visible for keyboard users */
+.btn:focus {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.btn:disabled {
+  background-color: #cfd3da;
+  color: #8b909b;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

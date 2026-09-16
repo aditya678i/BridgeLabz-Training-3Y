@@ -1,0 +1,77 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #1b1e26;
+  color: #e6e9f0;
+}
+
+/* Center everything on the page using Flexbox */
+.tooltip-stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.tooltip-row {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.tooltip-wrap {
+  position: relative;     /* anchors the absolutely positioned tooltip */
+  display: inline-block;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #2a2f3d;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tooltip-wrap:hover .icon {
+  background-color: #00adb5;
+}
+
+/* Tooltip built with position: absolute + opacity transition */
+.tooltip {
+  position: absolute;
+  bottom: 115%;                 /* stays above the hovered element */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #1b1e26;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Small arrow under the tooltip */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
+}
+
+.tooltip-wrap:hover .tooltip {
+  opacity: 1;
+}

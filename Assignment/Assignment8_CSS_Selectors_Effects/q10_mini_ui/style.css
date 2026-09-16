@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;    /* consistent box-sizing across the whole page */
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eef1f6;
+  color: #1e2230;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #1e2230;
+  color: #fff;
+}
+
+/* Main area centers the card both ways using Flexbox */
+.page-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.ui-card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem;
+  border-radius: 14px;
+  border: 1px solid #e2e6ee;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.mini-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mini-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.mini-form input {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #cfd5e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.mini-form input:focus {
+  outline: none;
+  border-color: #2952e3;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.65rem 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn.primary {
+  background-color: #2952e3;
+  color: #fff;
+}
+.btn.primary:hover { background-color: #1c3ba8; }
+.btn.primary:active { transform: scale(0.97); }
+
+.btn.outline {
+  background-color: transparent;
+  border-color: #2952e3;
+  color: #2952e3;
+}
+.btn.outline:hover { background-color: #2952e3; color: #fff; }
+
+.btn:focus {
+  outline: 3px solid #a9c0ff;
+  outline-offset: 2px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e2230;
+  color: #fff;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,63 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f7f7f9;
+  color: #232631;
+}
+
+.page-title { text-align: center; padding: 2rem 0 1rem; }
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 2.5rem 3rem;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;      /* keeps the zoomed image inside rounded corners */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+/* Semi-transparent darkening overlay on hover */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.item figcaption {
+  padding-top: 0.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4a5361;
+}
+
+/* Responsive: single column below 700px */
+@media (max-width: 700px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem 3rem;
+  }
+}

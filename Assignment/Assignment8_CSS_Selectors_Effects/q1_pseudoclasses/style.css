@@ -1,0 +1,96 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #222831;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+/* Flexbox row to align all examples neatly */
+.examples-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem 2rem 3rem;
+}
+
+.example {
+  background-color: #fff;
+  flex: 1 1 220px;
+  max-width: 260px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.example p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #4a5361;
+}
+
+/* :hover — link changes color and background on hover */
+.demo-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #00adb5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.demo-link:hover {
+  background-color: #007e84;
+}
+
+/* :focus — input border/background changes when selected */
+.demo-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #c9cfda;
+  border-radius: 6px;
+  outline: none;
+}
+
+.demo-input:focus {
+  border-color: #00adb5;
+  background-color: #eefcfd;
+}
+
+/* :active — button changes style while being pressed */
+.demo-btn {
+  padding: 0.6rem 1.4rem;
+  background-color: #393e46;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.demo-btn:active {
+  background-color: #00adb5;
+  transform: scale(0.96);
+}
+
+/* :nth-child — highlight alternate list items */
+.demo-list {
+  list-style: none;
+  text-align: left;
+}
+
+.demo-list li {
+  padding: 0.5rem 0.75rem;
+}
+
+.demo-list li:nth-child(even) {
+  background-color: #eefcfd;
+  border-radius: 4px;
+}

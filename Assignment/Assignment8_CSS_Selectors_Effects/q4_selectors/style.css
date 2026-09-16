@@ -1,0 +1,80 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #23272f;
+  padding: 0 0 2rem;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #23272f;
+  color: #fff;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+main > * {
+  margin-bottom: 1.25rem;
+}
+
+/* 1. Element selector — targets every <p> by tag name */
+p {
+  line-height: 1.6;
+  padding: 0.5rem 0.75rem;
+}
+
+/* 2. Class selector — targets any element with class="highlight" */
+.highlight {
+  background-color: #fff3cd;
+  border-left: 4px solid #d9a400;
+}
+
+/* 3. ID selector — targets the single element with id="intro" */
+#intro {
+  background-color: #d9f2ec;
+  border-left: 4px solid #00adb5;
+}
+
+/* 4. Attribute selector — targets links opening in a new tab */
+a[target="_blank"] {
+  color: #7a1f2b;
+  font-weight: 600;
+}
+
+/* 5. Descendant combinator (space) — any <p> inside .card, at any depth */
+.card {
+  background-color: #eef1f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.card p {
+  color: #2952e3;
+  font-style: italic;
+}
+
+/* 6. Child combinator (>) — only direct <li> children of ul.list-demo */
+.list-demo > li {
+  background-color: #e8e8e8;
+  margin-bottom: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* 7. Adjacent sibling combinator (+) — the <p> immediately after an <h2> */
+h2 + p {
+  color: #007e84;
+  font-weight: 600;
+}
+
+/* 8. General sibling combinator (~) — every <p> that follows an <h3>, not just the first */
+h3 ~ p {
+  background-color: #fdeee8;
+}

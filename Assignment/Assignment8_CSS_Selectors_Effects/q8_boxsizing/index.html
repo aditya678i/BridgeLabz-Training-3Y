@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box-Sizing Comparison</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="page-title">box-sizing: content-box vs border-box</h1>
+
+  <main class="compare-row">
+    <div class="box content-box-demo">
+      <h2>content-box (default)</h2>
+      <p>width: 250px, padding: 20px, border: 5px</p>
+      <p>Total rendered width = 250 + 40 + 10 = <strong>300px</strong></p>
+    </div>
+
+    <div class="box border-box-demo">
+      <h2>box-sizing: border-box</h2>
+      <p>width: 250px, padding: 20px, border: 5px</p>
+      <p>Total rendered width stays exactly <strong>250px</strong></p>
+    </div>
+  </main>
+
+  <p class="explanation">
+    With the default <code>content-box</code>, padding and border are added
+    on top of the specified width, so the box grows larger than 250px.
+    With <code>border-box</code>, padding and border are included inside the
+    specified width, keeping both boxes predictable when building layouts.
+  </p>
+
+</body>
+</html>
