@@ -1,0 +1,77 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #23272f;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header: logo left, nav right */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: #23272f;
+  color: #fff;
+}
+
+.logo { font-weight: 700; font-size: 1.3rem; }
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+.site-header nav a:hover { color: #00adb5; }
+
+/* Three feature boxes horizontal */
+.feature-row {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+}
+
+.feature-box {
+  flex: 1 1 220px;
+  max-width: 280px;
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+.feature-box h2 { margin-bottom: 0.75rem; color: #00adb5; }
+.feature-box p { color: #4a5361; line-height: 1.6; }
+
+/* Footer centered */
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #23272f;
+  color: #fff;
+}
+
+/* Stack vertically below 750px */
+@media (max-width: 750px) {
+  .site-header { flex-direction: column; gap: 0.75rem; }
+  .feature-row { flex-direction: column; align-items: center; }
+  .feature-box { max-width: 100%; width: 100%; }
+}

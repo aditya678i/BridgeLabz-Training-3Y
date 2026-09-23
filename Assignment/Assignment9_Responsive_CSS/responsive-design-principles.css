@@ -1,0 +1,48 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #14161e;
+  color: #eaeaea;
+}
+
+.page-title { text-align: center; padding: 2.5rem 0 1.5rem; }
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 2.5rem 4rem;
+}
+
+.principle {
+  background-color: #1f232e;
+  padding: 1.75rem;
+  border-radius: 12px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Gradient background + text color change on hover */
+.principle:hover {
+  background: linear-gradient(135deg, #00adb5, #6c63ff);
+  color: #fff;
+}
+
+.principle h2 { margin-bottom: 0.75rem; }
+.principle p { font-size: 0.9rem; line-height: 1.55; margin-bottom: 1rem; color: inherit; }
+
+.principle code {
+  display: block;
+  background-color: rgba(255,255,255,0.08);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* Single column below 600px */
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem 3rem;
+  }
+}

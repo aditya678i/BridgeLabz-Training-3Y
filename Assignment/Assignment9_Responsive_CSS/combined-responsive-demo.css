@@ -1,0 +1,96 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f2f4f8;
+  color: #1e2230;
+}
+
+/* Header: Flexbox */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: #1e2230;
+  color: #fff;
+}
+
+.logo { font-weight: 700; }
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.site-header nav a:hover { color: #00adb5; }
+
+/* Fade-in animation for main sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Main: Grid with three sections */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+.main-grid section {
+  background-color: #fff;
+  padding: 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 0.6s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-grid section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.14);
+}
+
+.main-grid h2 { margin-bottom: 1rem; font-size: 1.1rem; color: #00adb5; }
+
+.mini-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.mini-gallery img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.about-section p { line-height: 1.6; font-size: 0.9rem; color: #4a5361; }
+
+.cheatsheet-preview ul { list-style: none; }
+.cheatsheet-preview li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #1e2230;
+  color: #fff;
+}
+
+/* Below 700px: everything stacks vertically */
+@media (max-width: 700px) {
+  .site-header { flex-direction: column; gap: 0.75rem; }
+  .main-grid { grid-template-columns: 1fr; padding: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-grid section { animation: none; }
+}

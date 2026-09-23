@@ -1,0 +1,53 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #14161e;
+  color: #eaeaea;
+}
+
+.page-title { text-align: center; padding: 2rem 0 1rem; }
+
+/* Responsive auto-fitting grid */
+.filter-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 2.5rem 4rem;
+}
+
+.photo { text-align: center; }
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: filter 0.5s ease;   /* smooth removal of the filter on hover */
+}
+
+.photo figcaption {
+  padding-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #9aa0ab;
+}
+
+/* Each image gets a different filter, removed on hover */
+.blur img        { filter: blur(4px); }
+.grayscale img    { filter: grayscale(100%); }
+.sepia img         { filter: sepia(80%); }
+.brightness img    { filter: brightness(1.5); }
+.contrast img       { filter: contrast(1.8); }
+.hue-rotate img      { filter: hue-rotate(120deg); }
+
+.photo:hover img { filter: none; }
+
+/* Single column below 600px */
+@media (max-width: 600px) {
+  .filter-gallery {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem 3rem;
+  }
+}
