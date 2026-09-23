@@ -1,0 +1,91 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eef1f6;
+  color: #1e2230;
+}
+
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.demo-form {
+  background-color: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;   /* uniform spacing between form elements */
+}
+
+.demo-form h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.demo-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.9rem;
+}
+
+.demo-form input,
+.demo-form textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #cfd5e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  outline: none;                 /* default outline removed until focus */
+  transition: outline-color 0.2s ease;
+}
+
+/* Each field demonstrates a different outline style + offset on focus */
+.outline-solid:focus {
+  outline: 3px solid #2952e3;
+  outline-offset: 3px;
+}
+
+.outline-dashed:focus {
+  outline: 3px dashed #00adb5;
+  outline-offset: 4px;
+}
+
+.outline-dotted:focus {
+  outline: 3px dotted #ff6b6b;
+  outline-offset: 2px;
+}
+
+.outline-double:focus {
+  outline: 5px double #6c63ff;
+  outline-offset: 3px;
+}
+
+.demo-form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #2952e3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.demo-form button:hover { background-color: #1c3ba8; }
+
+.demo-form button:focus {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}

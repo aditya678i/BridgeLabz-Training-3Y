@@ -1,0 +1,44 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #23272f;
+}
+
+.page-title { text-align: center; padding: 2rem 0 1rem; }
+
+/* Boxes aligned horizontally using Flexbox */
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 1rem 2rem 3rem;
+}
+
+.box {
+  flex: 1 1 180px;
+  max-width: 220px;
+  background-color: #fff;
+  text-align: center;
+  border: 3px solid #00adb5;
+  transition: border-color 0.3s ease;  /* smooth hover color change */
+}
+
+.box:hover {
+  border-color: #ff6b6b;
+}
+
+/* Different border styles */
+.solid  { border-style: solid;  padding: 8px; }
+.dashed { border-style: dashed; padding: 16px; }
+.double { border-style: double; border-width: 6px; padding: 24px; }
+
+/* Rounded corners example */
+.groove {
+  border-style: groove;
+  padding: 16px;
+  border-radius: 20px;
+}

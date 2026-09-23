@@ -1,0 +1,74 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #fdfaf5;
+  color: #2a2a2a;
+}
+
+article {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.byline {
+  font-size: 1rem;
+  color: #6b6b6b;
+  margin-bottom: 2rem;
+  letter-spacing: 0.3px;
+}
+
+article p {
+  font-size: 1.05rem;
+  line-height: 1.75;        /* line-height for readability */
+  letter-spacing: 0.2px;    /* letter-spacing for readability */
+  text-align: left;
+  margin-bottom: 1.3rem;
+}
+
+/* Larger first letter of the opening paragraph */
+article > p:first-of-type::first-letter {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #7a1f2b;
+  float: left;
+  line-height: 1;
+  padding-right: 6px;
+}
+
+/* Bold first line of the opening paragraph */
+article > p:first-of-type::first-line {
+  font-weight: 600;
+}
+
+/* Custom-styled inline elements */
+strong {
+  color: #7a1f2b;
+}
+
+em {
+  color: #2952e3;
+  font-style: italic;
+}
+
+mark {
+  background-color: #ffe08a;
+  color: #2a2a2a;
+  padding: 0 3px;
+}
+
+/* Serif sample paragraph — different font family, size, and weight */
+.serif-sample {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: justify;
+}

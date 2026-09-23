@@ -1,0 +1,116 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #23272f;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 1.75rem;
+  background-color: #23272f;
+  color: #fff;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+section { margin-bottom: 2.5rem; }
+section h2 { margin-bottom: 1rem; }
+
+/* ===== Attribute selectors ===== */
+/* Targets any input with type="text" */
+input[type="text"] {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #c9cfda;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Targets links whose href starts with "https" */
+a[href^="https"] {
+  color: #00adb5;
+  font-weight: 600;
+}
+
+/* ===== Pseudo-classes ===== */
+.items { list-style: none; margin-top: 0.75rem; }
+
+.items li {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* :hover */
+.items li:hover {
+  background-color: #eefcfd;
+}
+
+/* :nth-child(odd) */
+.items li:nth-child(odd) {
+  font-weight: 600;
+}
+
+/* :focus */
+.focus-demo {
+  margin-top: 1rem;
+  outline: none;
+}
+
+.focus-demo:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 3px rgba(0,173,181,0.2);
+}
+
+/* ===== Combinators ===== */
+.parent {
+  margin-top: 1.5rem;
+  background-color: #eef1f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Child combinator (>) — only the direct <p> child of .parent */
+.parent > p {
+  color: #2952e3;
+  font-weight: 600;
+}
+
+/* Descendant combinator (space) — any <p> inside .parent, at any depth */
+.parent p {
+  margin-bottom: 0.5rem;
+}
+
+/* Adjacent sibling (+) — the <p> immediately following an <h3> */
+h3 + p {
+  color: #00adb5;
+  font-weight: 600;
+}
+
+/* General sibling (~) — every <p> after the <h3>, not just the first */
+h3 ~ p {
+  background-color: #fdeee8;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* ===== Pseudo-elements ===== */
+.quote-demo::before {
+  content: "\201C";   /* opening curly quote */
+  font-size: 1.4rem;
+  color: #ff6b6b;
+  margin-right: 4px;
+}
+
+.quote-demo::after {
+  content: "\201D";   /* closing curly quote */
+  font-size: 1.4rem;
+  color: #ff6b6b;
+  margin-left: 4px;
+}

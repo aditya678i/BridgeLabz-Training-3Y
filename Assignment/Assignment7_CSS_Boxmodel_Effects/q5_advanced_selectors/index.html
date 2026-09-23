@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS Selectors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Advanced CSS Selectors</h1>
+  </header>
+
+  <main>
+    <section class="form-demo">
+      <h2>Attribute Selectors</h2>
+      <input type="text" placeholder="Text input — [type='text']">
+      <br><br>
+      <a href="https://example.com">A secure link (href^="https")</a>
+      <br>
+      <a href="mailto:test@example.com">A mailto link (not matched)</a>
+    </section>
+
+    <section class="list-demo">
+      <h2>Pseudo-classes &amp; Combinators</h2>
+      <ul class="items">
+        <li>Item one — try :hover and :nth-child(odd)</li>
+        <li>Item two</li>
+        <li>Item three</li>
+        <li>Item four</li>
+      </ul>
+      <input type="text" class="focus-demo" placeholder="Click to see :focus">
+
+      <div class="parent">
+        <p>Direct child paragraph (styled via &gt;)</p>
+        <span>
+          <p>Nested paragraph (descendant selector only)</p>
+        </span>
+      </div>
+
+      <h3>Adjacent &amp; General Siblings</h3>
+      <p>Immediately after the heading (+)</p>
+      <p>Further sibling, still matched by (~)</p>
+    </section>
+
+    <section class="pseudo-elements-demo">
+      <h2>Pseudo-elements</h2>
+      <p class="quote-demo">This paragraph has ::before and ::after content added around it.</p>
+    </section>
+  </main>
+
+</body>
+</html>

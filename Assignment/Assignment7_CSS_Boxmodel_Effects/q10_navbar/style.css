@@ -1,0 +1,71 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #23272f;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Horizontal navbar with five links */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #23272f;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-right: 1px solid #3a3f4a;
+  transition: all 0.3s ease;   /* smooth hover transition */
+}
+
+.navbar a:last-child { border-right: none; }
+
+.navbar a:hover {
+  background-color: #393e46;
+  color: #00adb5;
+}
+
+/* Highlight the active link */
+.navbar a.active {
+  background-color: #00adb5;
+  color: #fff;
+  font-weight: 600;
+}
+
+.page-content {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  color: #4a5361;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #23272f;
+  color: #fff;
+}
+
+/* Stack vertically below 700px */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar a {
+    border-right: none;
+    border-bottom: 1px solid #3a3f4a;
+    text-align: center;
+  }
+  .navbar a:last-child { border-bottom: none; }
+}

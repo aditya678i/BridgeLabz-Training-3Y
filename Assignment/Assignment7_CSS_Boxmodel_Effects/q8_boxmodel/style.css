@@ -1,0 +1,71 @@
+* { margin: 0; padding: 0; box-sizing: content-box; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #23272f;
+}
+
+.page-title { text-align: center; padding: 2.5rem 0 1.5rem; }
+
+/* Center the whole demonstration using Flexbox */
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 1rem 2rem 4rem;
+}
+
+.demo {
+  text-align: center;
+  max-width: 280px;
+}
+
+.demo h2 { margin-bottom: 1rem; font-size: 1.05rem; }
+.demo p  { margin-top: 1rem; font-size: 0.85rem; color: #4a5361; }
+
+/* Outermost layer: margin */
+.margin-layer {
+  background-color: #ffe08a;   /* margin layer color */
+  outline: 1px dashed #b58b00;
+  padding: 20px;
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #6b5300;
+}
+
+/* Border layer */
+.border-layer {
+  background-color: #ffb199;   /* border layer color */
+  outline: 1px dashed #a3402a;
+  border: 8px solid #ff6b6b;
+  padding: 16px;
+  font-size: 0.75rem;
+  color: #6b1e0f;
+  width: 140px;
+}
+
+/* border-box demo keeps the same declared width even with border+padding */
+.border-layer.border-box-demo {
+  box-sizing: border-box;
+}
+
+/* Padding layer */
+.padding-layer {
+  background-color: #a8e6cf;   /* padding layer color */
+  outline: 1px dashed #2f7a58;
+  padding: 14px;
+  font-size: 0.75rem;
+  color: #1f4d38;
+}
+
+/* Content layer */
+.content-layer {
+  background-color: #4a90d9;   /* content layer color */
+  color: #fff;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

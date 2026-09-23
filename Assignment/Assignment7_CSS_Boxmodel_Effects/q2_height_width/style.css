@@ -1,0 +1,57 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eef1f6;
+  color: #1e2230;
+}
+
+/* Centers all boxes vertically and horizontally */
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.box {
+  border-radius: 10px;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Fixed pixel size */
+.box-px {
+  width: 200px;
+  height: 200px;
+  background-color: #2952e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Percentage width with constraints */
+.box-percent {
+  width: 50%;
+  max-width: 300px;    /* stops it growing too wide on large screens */
+  min-height: 150px;   /* guarantees a minimum height even with little content */
+  background-color: #00adb5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Viewport height + em padding, with overflow control */
+.box-vh-em {
+  width: 240px;
+  height: 30vh;
+  padding: 2em;
+  background-color: #ff6b6b;
+  overflow: auto;   /* content that doesn't fit scrolls instead of expanding the box */
+}

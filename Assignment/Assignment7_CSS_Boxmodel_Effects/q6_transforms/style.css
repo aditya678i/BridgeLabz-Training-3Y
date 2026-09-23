@@ -1,0 +1,44 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #14161e;
+  color: #eaeaea;
+}
+
+.page-title { text-align: center; padding: 2.5rem 0 2rem; }
+
+/* Boxes arranged horizontally using Flexbox */
+.transform-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 2rem 4rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: #00adb5;
+  border-radius: 8px;
+  transition: all 0.4s ease;   /* smooth activation on hover, as required */
+}
+
+.item p {
+  font-size: 0.85rem;
+  color: #9aa0ab;
+}
+
+.rotate-box:hover    { transform: rotate(45deg); background-color: #ff6b6b; }
+.scale-box:hover     { transform: scale(1.3);   background-color: #ffd166; }
+.translate-box:hover { transform: translateY(-20px); background-color: #6c63ff; }
+.skew-box:hover       { transform: skew(15deg, 5deg); background-color: #00adb5; }

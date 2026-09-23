@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #fff;
+}
+
+/* Fixed header and footer */
+.site-header, .site-footer {
+  position: sticky;
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #1e2230;
+  z-index: 10;
+}
+
+.site-header { top: 0; }
+.site-footer { bottom: 0; position: static; } /* footer stays at natural flow end */
+
+main section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+main section h2 { font-size: 2rem; margin-bottom: 1rem; }
+main section p  { max-width: 600px; line-height: 1.7; }
+
+/* Linear gradient with parallax-like fixed attachment */
+.linear-section {
+  background: linear-gradient(135deg, #0f2027, #2c5364);
+  background-attachment: fixed;
+}
+
+/* Radial gradient */
+.radial-section {
+  background: radial-gradient(circle at center, #ffd166 0%, #d9760c 100%);
+  color: #2b2000;
+}
