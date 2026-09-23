@@ -1,0 +1,16 @@
+/* Custom styles layered on top of Bootstrap — keep specificity low so
+   Bootstrap utility classes can still override where used inline. */
+
+.hero-section {
+  background: linear-gradient(135deg, #2952e3, #6c63ff);
+  padding: 6rem 1rem;
+}
+
+.hero-section .lead {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+}

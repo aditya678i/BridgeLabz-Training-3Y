@@ -1,0 +1,10 @@
+/* Minor custom touches on top of Bootstrap utility classes */
+
+header img {
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  margin-right: 0.5rem;
+}

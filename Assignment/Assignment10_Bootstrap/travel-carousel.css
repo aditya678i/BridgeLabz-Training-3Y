@@ -1,0 +1,13 @@
+main {
+  max-width: 900px;
+}
+
+.carousel-caption h5 {
+  font-weight: 700;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}

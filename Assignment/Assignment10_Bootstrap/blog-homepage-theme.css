@@ -1,0 +1,33 @@
+/* Override core Bootstrap CSS variables to apply a custom theme colour
+   and font across the page, while keeping Bootstrap's responsive structure. */
+:root {
+  --bs-primary: #7a1f2b;
+  --bs-primary-rgb: 122, 31, 43;
+  --bs-font-sans-serif: 'Merriweather', Georgia, serif;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: #f6f4ef;
+  color: #2b2925;
+}
+
+.themed-header {
+  background-color: var(--bs-primary);
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+/* Button styled using the overridden theme color instead of Bootstrap's default primary */
+.themed-btn {
+  background-color: var(--bs-primary);
+  color: #fff;
+  border: none;
+}
+
+.themed-btn:hover {
+  background-color: #5c1720;
+  color: #fff;
+}

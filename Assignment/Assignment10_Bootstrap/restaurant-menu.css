@@ -1,0 +1,9 @@
+/* Small typographic tweak so the menu heading stands out from body text */
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.5px;
+}
+
+figcaption {
+  font-style: italic;
+}

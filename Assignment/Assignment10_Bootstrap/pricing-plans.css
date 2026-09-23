@@ -1,0 +1,17 @@
+/* Hover lift effect layered on top of Bootstrap's shadow utilities */
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Slightly larger scale so the Pro plan stands out even before hover */
+.pricing-card--pro {
+  transform: scale(1.03);
+}
+
+.pricing-card--pro:hover {
+  transform: scale(1.03) translateY(-8px);
+}
